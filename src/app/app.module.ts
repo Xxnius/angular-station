@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { StationsComponent } from './components/stations/stations.component';
+import { StationsformComponent } from './components/stationsform/stationsform.component';
 
 // Register the localization
 registerLocaleData(localePt, 'fr-FR');
@@ -27,7 +28,8 @@ registerLocaleData(localePt, 'fr-FR');
     HeaderComponent,
     HerofullscreenComponent,
     CurrencyPipe,
-    StationsComponent
+    StationsComponent,
+    StationsformComponent
   ],
   imports: [
     BrowserModule,

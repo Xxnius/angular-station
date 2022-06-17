@@ -1,0 +1,180 @@
+<div class="stationsform">
+  <div class="hero-stationsform relative h-96 flex items-center justify-center">
+    <div class="hero-stationsform__background">
+      <img class="absolute inset-0 object-cover w-full h-full opacity-75" [src]="heroBackground" alt="">
+    </div>
+    <div class="hero-stationsform__background-overlay bg-black opacity-50 absolute inset-0 w-full h-full"></div>
+    <div class="hero-stationsform__content relative mt-12">
+      <div class="grid-row">
+        <div class="hero-stations__text-container px-32 text-center">
+          <div class="flex flex-col items-center">
+            <h1 class="text-white text-7xl font-extralight pb-4">Créer une nouvelle station</h1>
+            <p class="text-white">
+              Cette page permet de créer de nouvelles stations.
+            </p>
+            <a
+              href="#"
+              routerLink="/stations"
+              class="btn btn--M btn--ghost-white cursor-pointer mt-12"
+            >
+              Retour aux stations
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-stationsform w-full py-8">
+    <form action="" method="POST" class="flex justify-center gap-x-12">
+      <div>
+        <div class="mb-5">
+          <label
+            for="city"
+            class="mb-3 block text-base font-medium text-black"
+          >
+            Ville
+          </label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Ville"
+            class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <fieldset>
+            <label
+              for="isActive"
+              class="mb-3 block text-base font-medium text-black"
+            >
+              La station est-elle active ?
+            </label>
+
+            <div class="flex items-center mb-4">
+              <input id="isActive-true" type="radio" name="isActive" value="true" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked>
+              <label for="isActive-true" class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                Oui
+              </label>
+            </div>
+
+            <div class="flex items-center mb-4">
+              <input id="isActive-false" type="radio" name="isActive" value="false" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600">
+              <label for="isActive-false" class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                Non
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="mb-5">
+          <label
+            for="installationDate"
+            class="mb-3 block text-base font-medium text-black"
+          >
+            Date d'installation
+          </label>
+          <input
+            type="text"
+            name="installationDate"
+            id="installationDate"
+            placeholder="Date d'installation"
+            class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label
+            for="latitude"
+            class="mb-3 block text-base font-medium text-black"
+          >
+            Latitude
+          </label>
+          <input
+            type="text"
+            name="latitude"
+            id="latitude"
+            placeholder="Latitude"
+            class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
+        </div>
+        <div>
+          <button
+            class="btn btn--M btn--ghost-black cursor-pointer"
+          >
+            Créer
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="mb-5">
+          <label
+            for="longitude"
+            class="mb-3 block text-base font-medium text-black"
+          >
+            Longitude
+          </label>
+          <input
+            type="text"
+            name="longitude"
+            id="longitude"
+            placeholder="Longitude"
+            class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label
+            for="name"
+            class="mb-3 block text-base font-medium text-black"
+          >
+            Nom de la station
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nom de la station"
+            class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label
+            for="operatingStateDate"
+            class="mb-3 block text-base font-medium text-black"
+          >
+            Date de mise en opération
+          </label>
+          <input
+            type="text"
+            name="operatingStateDate"
+            id="operatingStateDate"
+            placeholder="Date de mise en opération"
+            class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label
+            for="updateDate"
+            class="mb-3 block text-base font-medium text-black"
+          >
+            Date de mise à jour
+          </label>
+          <input
+            type="text"
+            name="updateDate"
+            id="updateDate"
+            placeholder="Date de mise à jour"
+            class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label
+            for="firmwareVersion"
+            class="mb-3 block text-base font-medium text-black"
+          >
+            Version du firmware
+          </label>
+          <input
+            type="text"
+            name="firmwareVersion"
+            id="firmwareVersion"
+            placeholder="Version du firmware"
+            class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
