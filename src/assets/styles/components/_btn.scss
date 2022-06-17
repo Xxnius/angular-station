@@ -1,0 +1,126 @@
+.btn {
+  @apply relative inline-flex items-center overflow-hidden cursor-pointer;
+  transition: all 0.2s ease-out;
+
+  &:before {
+    content: '';
+    @apply w-0 h-full absolute left-0 bottom-0;
+    transition: all 0.2s;
+  }
+
+  span {
+    @apply relative;
+  }
+
+  &:hover {
+    &:before {
+      @apply w-full;
+    }
+  }
+
+  &--M {
+    @apply px-6;
+    height: 3.25rem;
+  }
+
+  &--ghost-black {
+    @apply border border-black text-black;
+
+    &:before {
+      @apply bg-black;
+    }
+
+    object {
+      @apply transition;
+    }
+
+    &:hover {
+      @apply text-white;
+
+      object {
+        filter: contrast(0%) brightness(200%);
+      }
+    }
+  }
+
+  &--ghost-white {
+    @apply border border-white text-white;
+
+    &:before {
+      @apply bg-white;
+    }
+
+    object {
+      @apply filter invert contrast-200 transition;
+    }
+
+    &:hover {
+      @apply text-black;
+
+      object {
+        @apply filter invert-0 contrast-200;
+      }
+    }
+  }
+
+  &--plain-black {
+    @apply bg-black text-white;
+  }
+
+  &--plain-white {
+    @apply bg-white text-black;
+  }
+
+  &--icon {
+    svg path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      &.btn--ghost-black svg path, &.btn--plain-black svg path {
+        fill: #FFFFFF;
+      }
+
+      &.btn--ghost-white svg path, &.btn--plain-white svg path {
+        fill: #35343b;
+      }
+    }
+  }
+}
+.btn-text {
+  @apply relative inline-flex items-center;
+
+  &:before {
+    content: '';
+    @apply absolute block w-0 bottom-0;
+    height: 1.5px;
+  }
+
+  &:hover {
+    &:before {
+      @apply w-full;
+    }
+  }
+
+  &--M {
+    padding-bottom: 0.25rem;
+  }
+
+  &--no-underline:before {
+    @apply hidden;
+  }
+
+  &--black {
+    @apply text-grey-black;
+
+    &:before { @apply bg-grey-black;}
+  }
+
+  &--white {
+    @apply text-white;
+
+    &:before { @apply bg-white;}
+  }
+}
+
+

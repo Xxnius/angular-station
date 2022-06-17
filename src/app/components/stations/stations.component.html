@@ -1,0 +1,206 @@
+<div class="stations">
+  <div class="hero-stations relative h-96 flex items-center justify-center">
+    <div class="hero-stations__background">
+      <img class="absolute inset-0 object-cover w-full h-full opacity-75" [src]="heroBackground" alt="">
+    </div>
+    <div class="hero-stations__background-overlay bg-black opacity-50 absolute inset-0 w-full h-full"></div>
+    <div class="hero-stations__content relative mt-12">
+      <div class="grid-row">
+        <div class="hero-stations__text-container px-32 text-center">
+          <div class="flex flex-col items-center">
+            <h1 class="text-white text-7xl font-extralight pb-4">Les stations</h1>
+            <p class="text-white">
+              Cette page répertorie la liste des stations.
+            </p>
+            <a
+              href="#"
+              routerLink="/stations/:stationsid"
+              class="btn btn--M btn--ghost-white cursor-pointer mt-12"
+            >
+              Créer une nouvelle station
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-stations flex flex-wrap items-center">
+    <div>
+      <div
+        *ngFor="let s of stationList"
+        class="hidden"
+      >
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">{{ s }}</div>
+          <p class="text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full md:w-6/12 lg:w-4/12 h-full p-14 rounded-lg overflow-hidden">
+      <div class="map overflow-hidden rounded-lg">
+        <div class="gmap">
+          <iframe
+            width="600"
+            height="500"
+            src="https://maps.google.com/maps?q=45.36395%205.59209&output=embed"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Lorem ipsum dolor</div>
+          <p class="text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+          <a
+            href="#"
+            routerLink="stations/:stationsid"
+            class="btn btn--M btn--ghost-black cursor-pointer mt-6"
+          >
+            Voir les stations
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full md:w-6/12 lg:w-4/12 h-full p-14 rounded-lg overflow-hidden">
+      <div class="map overflow-hidden rounded-lg">
+        <div class="gmap">
+          <iframe
+            width="600"
+            height="500"
+            src="https://maps.google.com/maps?q=45.36395%205.59209&output=embed"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Lorem ipsum dolor</div>
+          <p class="text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+          <a
+            href="#"
+            routerLink="stations/:stationsid"
+            class="btn btn--M btn--ghost-black cursor-pointer mt-6"
+          >
+            Voir les stations
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full md:w-6/12 lg:w-4/12 h-full p-14 rounded-lg overflow-hidden">
+      <div class="map overflow-hidden rounded-lg">
+        <div class="gmap">
+          <iframe
+            width="600"
+            height="500"
+            src="https://maps.google.com/maps?q=45.36395%205.59209&output=embed"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Lorem ipsum dolor</div>
+          <p class="text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+          <a
+            href="#"
+            routerLink="stations/:stationsid"
+            class="btn btn--M btn--ghost-black cursor-pointer mt-6"
+          >
+            Voir les stations
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full md:w-6/12 lg:w-4/12 h-full p-14 rounded-lg overflow-hidden">
+      <div class="map overflow-hidden rounded-lg">
+        <div class="gmap">
+          <iframe
+            width="600"
+            height="500"
+            src="https://maps.google.com/maps?q=45.36395%205.59209&output=embed"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Lorem ipsum dolor</div>
+          <p class="text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+          <a
+            href="#"
+            routerLink="stations/:stationsid"
+            class="btn btn--M btn--ghost-black cursor-pointer mt-6"
+          >
+            Voir les stations
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full md:w-6/12 lg:w-4/12 h-full p-14 rounded-lg overflow-hidden">
+      <div class="map overflow-hidden rounded-lg">
+        <div class="gmap">
+          <iframe
+            width="600"
+            height="500"
+            src="https://maps.google.com/maps?q=45.36395%205.59209&output=embed"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Lorem ipsum dolor</div>
+          <p class="text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+          <a
+            href="#"
+            routerLink="stations/:stationsid"
+            class="btn btn--M btn--ghost-black cursor-pointer mt-6"
+          >
+            Voir les stations
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full md:w-6/12 lg:w-4/12 h-full p-14 rounded-lg overflow-hidden">
+      <div class="map overflow-hidden rounded-lg">
+        <div class="gmap">
+          <iframe
+            width="600"
+            height="500"
+            src="https://maps.google.com/maps?q=45.36395%205.59209&output=embed"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Lorem ipsum dolor</div>
+          <p class="text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+          <a
+            href="#"
+            routerLink="stations/:stationsid"
+            class="btn btn--M btn--ghost-black cursor-pointer mt-6"
+          >
+            Voir les stations
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
