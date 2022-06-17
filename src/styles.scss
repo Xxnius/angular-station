@@ -4,22 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "assets/styles/base/base";
+@import "assets/styles/base/typography";
+
 @import 'assets/styles/components/btn';
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&display=swap');
-
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-}

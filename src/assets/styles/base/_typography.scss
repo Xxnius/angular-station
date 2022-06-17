@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&display=swap');
+
+body {
+  @apply font-poppins font-light;
+}
+
+h1, .h1 {
+  @apply font-light;
+  font-size: 3rem;
+
+  @screen md {
+    font-size: 4.5rem;
+  }
+}
+
+h2, .h2 {
+
+}
+
+h3, .h3 {
+
+}
+
+.hero-1 {
+
+}
+
+.body-1 {
+
+}

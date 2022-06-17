@@ -53,6 +53,11 @@ module.exports = {
         dark: '#148533',
       },
     },
+
+    fontFamily: {
+      'poppins': ['Poppins', 'sans-serif']
+    },
+
     extend: {},
   },
   plugins: [],

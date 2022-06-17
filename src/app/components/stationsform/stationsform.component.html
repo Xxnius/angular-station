@@ -6,16 +6,16 @@
     <div class="hero-stationsform__background-overlay bg-black opacity-50 absolute inset-0 w-full h-full"></div>
     <div class="hero-stationsform__content relative mt-12">
       <div class="grid-row">
-        <div class="hero-stations__text-container px-32 text-center">
+        <div class="hero-stations__text-container text-center">
           <div class="flex flex-col items-center">
-            <h1 class="text-white text-7xl font-extralight pb-4">Créer une nouvelle station</h1>
-            <p class="text-white">
+            <h1 class="text-white pb-4">Nouvelle station</h1>
+            <p class="text-white px-8">
               Cette page permet de créer de nouvelles stations.
             </p>
             <a
               href="#"
               routerLink="/stations"
-              class="btn btn--M btn--ghost-white cursor-pointer mt-12"
+              class="btn btn--M btn--ghost-white cursor-pointer mt-4 md:mt-12"
             >
               Retour aux stations
             </a>
@@ -25,8 +25,8 @@
     </div>
   </div>
   <div class="content-stationsform w-full py-8">
-    <form action="" method="POST" class="flex justify-center gap-x-12">
-      <div class="w-4/12">
+    <form action="" method="POST" class="flex flex-col md:flex-row justify-center gap-x-12 px-8 md:px-0">
+      <div class="w-full md:w-4/12">
         <div class="mb-5">
           <label
             for="city"
@@ -93,7 +93,7 @@
             placeholder="Latitude"
             class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
         </div>
-        <div>
+        <div class="hidden md:block">
           <button
             class="btn btn--M btn--ghost-black cursor-pointer"
           >
@@ -101,7 +101,7 @@
           </button>
         </div>
       </div>
-      <div class="w-4/12">
+      <div class="w-full md:w-4/12">
         <div class="mb-5">
           <label
             for="longitude"
@@ -172,6 +172,13 @@
             placeholder="Version du firmware"
             class="w-full border border-black bg-white py-3 px-6 text-base font-medium text-black outline-none focus:shadow-md" />
         </div>
+      </div>
+      <div class="block md:hidden">
+        <button
+          class="btn btn--M btn--ghost-black cursor-pointer"
+        >
+          Créer
+        </button>
       </div>
     </form>
   </div>
