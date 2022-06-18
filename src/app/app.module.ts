@@ -17,6 +17,7 @@ import { registerLocaleData } from '@angular/common';
 import { StationsComponent } from './components/stations/stations.component';
 import { StationsformComponent } from './components/stationsform/stationsform.component';
 import { StationComponent } from './components/station/station.component';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 // Register the localization
 registerLocaleData(localePt, 'fr-FR');
@@ -31,7 +32,8 @@ registerLocaleData(localePt, 'fr-FR');
     CurrencyPipe,
     StationsComponent,
     StationsformComponent,
-    StationComponent
+    StationComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,

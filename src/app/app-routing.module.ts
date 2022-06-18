@@ -9,7 +9,7 @@ import {StationComponent} from "./components/station/station.component";
 const routes: Routes = [
   { path: '', component: HerofullscreenComponent},
   { path: 'stations', component: StationsComponent },
-  { path: 'station', component: StationComponent },
+  { path: 'station/:id', component: StationComponent },
   { path: 'stationsform', component: StationsformComponent }
 ];
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Station } from "../../interfaces/station";
 import { StationsService } from "../../services/stations/stations.service";
+import { rootStation } from "../../interfaces/rootStation";
 
 @Component({
   selector: 'app-stations',
@@ -11,14 +12,12 @@ export class StationsComponent implements OnInit {
 
   heroBackground:any = "../assets/images/hero-stations-desktop.jpg";
 
-  stationList?: Station[];
+  stationList: rootStation = {} as any;
 
   constructor(private stationService: StationsService) { }
 
   showStations() {
     this.stationService.getAllStation().subscribe((data) => {
-      //console.log(Object.entries(data)[1]);
-      console.log(data);
       this.stationList = data
     });
   }

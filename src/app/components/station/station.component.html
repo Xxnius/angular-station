@@ -1,4 +1,7 @@
-<div class="station">
+<div
+  *ngIf="station"
+  class="station"
+>
   <div class="hero-station relative h-96 flex items-center justify-center">
     <div class="hero-station__background">
       <img class="absolute inset-0 object-cover w-full h-full opacity-75" [src]="heroBackground" alt="">
@@ -8,9 +11,9 @@
       <div class="grid-row">
         <div class="hero-stations__text-container text-center">
           <div class="flex flex-col items-center">
-            <h1 class="text-white pb-4">Station n°1</h1>
+            <h1 class="text-white pb-4">Station n°{{ station.$id }}</h1>
             <p class="text-white">
-              Station de Voiron - Installé le 17 Juin 2022
+              Station de {{ station.city }} - Installé le {{ station.installationDate }}
             </p>
             <a
               href="#"
@@ -25,7 +28,8 @@
     </div>
   </div>
   <div class="station-content">
-    <div class="flex flex-col md:flex-row w-full h-full justify-center p-8 md:p-14 rounded-lg overflow-hidden">
+    <div
+      class="flex flex-col md:flex-row w-full h-full justify-center p-8 md:p-14 rounded-lg overflow-hidden">
       <div class="map overflow-hidden rounded-lg">
         <div class="gmap">
           <iframe
@@ -37,22 +41,24 @@
         </div>
       </div>
       <div>
-        <div class="flex flex-col h-full justify-center px-6 py-4">
-          <h2 class="font-bold text-3xl mb-2">Weather</h2>
+        <div
+          class="flex flex-col h-full justify-center px-6 py-4"
+        >
+          <h2 class="font-bold text-3xl mb-2">{{ station.name }}</h2>
           <p class="text-base mt-4">
-            <b>Identifiant : </b>61dbd654-9399-4e80-a270-d3b9aa04212b
+            <b>Identifiant : </b>{{ station.id }}
           </p>
           <p class="text-base mt-4">
-            <b>Ville : </b>Voiron
+            <b>Ville : </b>{{ station.city }}
           </p>
           <p class="text-base mt-4">
-            <b>Status : </b>En activité
+            <b>Status : </b>{{ station.isActive ? "En activité" : "Non active" }}
           </p>
           <p class="text-base mt-4">
-            <b>Latitude : </b>45.36395°
+            <b>Latitude : </b>{{ station.latitude }}
           </p>
           <p class="text-base mt-4">
-            <b>Longitude : </b>5.59209°
+            <b>Longitude : </b>{{ station.longitude }}
           </p>
           <p class="text-base mt-4">
             <b>Date de début des opérations : </b>1er Janvier 2021
@@ -61,7 +67,7 @@
             <b>Date de mise à jour : </b>1er Janvier 2022
           </p>
           <p class="text-base mt-4">
-            <b>Version du firmware : </b>1.2.6
+            <b>Version du firmware : </b>{{ station.firmwareVersion }}
           </p>
         </div>
       </div>

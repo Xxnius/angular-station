@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Station } from '../../interfaces/station';
+import { rootStation } from "../../interfaces/rootStation";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class StationsService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllStation() : Observable<Station[]> {
-    return this.httpClient.get<Station[]>(this.station_api_url);
+  getAllStation() : Observable<rootStation> {
+    return this.httpClient.get<rootStation>(this.station_api_url);
   }
 }
