@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from "@angular/router";
 
 import { Station } from "../../interfaces/station";
@@ -17,7 +18,7 @@ export class StationComponent implements OnInit {
   station?:Station;
   id?: string;
 
-  constructor(private stationService: StationsService, private router: Router) {}
+  constructor(public sanitizer: DomSanitizer, private stationService: StationsService, private router: Router) {}
 
   showStation() {
     this.stationService.getAllStation().subscribe((data) => {
@@ -28,6 +29,10 @@ export class StationComponent implements OnInit {
         }
       }
     });
+  }
+
+  showStationCity(latitude: number, longitude: number) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl("https://maps.google.com/maps?q=" + latitude + "%20" + longitude + "&output=embed");
   }
 
   ngOnInit(): void {

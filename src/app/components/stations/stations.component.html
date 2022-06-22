@@ -33,7 +33,7 @@
           <iframe
             width="600"
             height="500"
-            src="https://maps.google.com/maps?q=Valence&output=embed"
+            [src]="showStationCity(s.latitude, s.longitude)"
           >
           </iframe>
         </div>
@@ -41,7 +41,6 @@
       <div>
         <div class="px-6 py-4">
           <h3 class="font-bold mb-2">{{ s.name }}</h3>
-          <!-- <p>https://maps.google.com/maps?q={{s.city}}&output=embed</p> -->
           <p class="text-base">
             <b>Latitude : </b>{{ s.latitude }} - <b>Longitude : </b>{{ s.longitude }}
           </p>

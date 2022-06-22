@@ -8,8 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { HerofullscreenComponent } from './components/herofullscreen/herofullscreen.component';
 
-import { CurrencyPipe } from './pipes/currency.pipe';
-
 import { HttpClientModule } from '@angular/common/http';
 
 import localePt from '@angular/common/locales/pt';
@@ -17,7 +15,6 @@ import { registerLocaleData } from '@angular/common';
 import { StationsComponent } from './components/stations/stations.component';
 import { StationsformComponent } from './components/stationsform/stationsform.component';
 import { StationComponent } from './components/station/station.component';
-import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 // Register the localization
 registerLocaleData(localePt, 'fr-FR');
@@ -29,11 +26,9 @@ registerLocaleData(localePt, 'fr-FR');
     AppComponent,
     HeaderComponent,
     HerofullscreenComponent,
-    CurrencyPipe,
     StationsComponent,
     StationsformComponent,
-    StationComponent,
-    SafeUrlPipe
+    StationComponent
   ],
   imports: [
     BrowserModule,
@@ -41,16 +36,6 @@ registerLocaleData(localePt, 'fr-FR');
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule
-  ],
-  providers: [
-    {
-      provide: LOCALE_ID,
-      useValue: 'fr-FR'
-    },
-    {
-      provide: DEFAULT_CURRENCY_CODE,
-      useValue: 'EUR'
-    }
   ],
   bootstrap: [AppComponent]
 })

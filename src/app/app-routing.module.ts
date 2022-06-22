@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { StationsComponent } from "./components/stations/stations.component";
 import { HerofullscreenComponent } from "./components/herofullscreen/herofullscreen.component";
-import {StationsformComponent} from "./components/stationsform/stationsform.component";
-import {StationComponent} from "./components/station/station.component";
+import { StationsformComponent } from "./components/stationsform/stationsform.component";
+import {StationComponent } from "./components/station/station.component";
 
 const routes: Routes = [
   { path: '', component: HerofullscreenComponent},
