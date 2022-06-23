@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { StationsService } from "../../services/stations/stations.service";
 
 
 @Component({
@@ -8,9 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-constructor() {}
+  stationsLength?: number;
+
+  constructor(private stationsService: StationsService) {}
 
   ngOnInit(): void {
+    this.stationsService.getAllStation().subscribe((data) => {
+      this.stationsLength = data['$values'].length;
+    })
   }
 
 }
