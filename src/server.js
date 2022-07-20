@@ -6,7 +6,7 @@ const compression = require('compression')
 const app = express()
 app.use(compression())
 
-const appname = 'station'
+const appname = 'tacos'
 
 // Point static path to dist
 app.use(express.static(path.join(__dirname, '..', 'dist', appname)))
