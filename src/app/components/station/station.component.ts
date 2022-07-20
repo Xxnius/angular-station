@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from "@angular/router";
 
+
 import { Station } from "../../interfaces/station";
 import { rootStation } from "../../interfaces/rootStation";
 import { StationsService } from "../../services/stations/stations.service";
@@ -36,6 +37,7 @@ export class StationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.router)
     this.id = this.router.url.substring(9);
     this.showStation();
   }
