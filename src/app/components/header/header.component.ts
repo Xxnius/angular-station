@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { StationsService } from "../../services/stations/stations.service";
 
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   stationsLength?: number;
 
-  constructor(private stationsService: StationsService) {}
+  constructor(private route: ActivatedRoute, private stationsService: StationsService) {}
 
   ngOnInit(): void {
     this.stationsService.getAllStation().subscribe((data) => {
